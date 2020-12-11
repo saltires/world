@@ -1,0 +1,13 @@
+{
+  "name": "ceshi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  },
+  
+  "scripts": {
+    "serve": "browser-sync start --server --files '*.html'"
+  }
+}
