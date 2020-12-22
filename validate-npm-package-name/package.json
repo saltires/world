@@ -1,0 +1,9 @@
+{
+  "name": "validate-npm-package-name",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "validate-npm-package-name": "^3.0.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "demo_chalk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^4.1.0"
+  }
+}

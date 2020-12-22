@@ -1,0 +1,9 @@
+{
+  "name": "extractzip",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "extract-zip": "^2.0.1"
+  }
+}

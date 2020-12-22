@@ -1,0 +1,9 @@
+{
+  "name": "demo_del_default",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "del": "^6.0.0"
+  }
+}

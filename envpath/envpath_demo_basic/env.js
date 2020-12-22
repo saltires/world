@@ -4,10 +4,19 @@ const envPaths = require('env-paths');
 const paths = envPaths('MyApp');
 
 console.log(paths.data)
-//=> '/home/sindresorhus/.local/share/MyApp-nodejs'
+//=> /Users/mac/Library/Application Support/MyApp-nodejs
 
 console.log(paths.config)
-//=> '/home/sindresorhus/.config/MyApp-nodejs'
+//=> /Users/mac/Library/Preferences/MyApp-nodejs
+
+console.log(paths.cache)
+// => /Users/mac/Library/Caches/MyApp-nodejs
+
+console.log(paths.temp)
+// => /var/folders/f5/k1ylyb7j0gx67dk4n2bf_c300000gn/T/MyApp-nodejs
+
+console.log(paths.log)
+// => /Users/mac/Library/Logs/MyApp-nodejs
 
 const path = require('path')
 
