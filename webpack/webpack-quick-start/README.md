@@ -8,7 +8,7 @@
 
 完整的下载这个文件夹，依序运行下面命令：
 - yarn
-- webpack
+- yarn build or yarn webpack
 - browser-sync ./
 
 ### 前提
