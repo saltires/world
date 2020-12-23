@@ -10,17 +10,24 @@ module.exports = {
     },
     module: {
         rules: [
-           {
-               test: /\.css$/,
-               use: [
-                   'style-loader',
-                   'css-loader'
-               ]
-           },
-           {
-               test: /\.jpg$/,
-               use: 'file-loader'
-           }
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10 * 1024,
+                        },
+                    },
+                ],
+            },
         ]
     }
 }
