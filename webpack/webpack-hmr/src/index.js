@@ -8,6 +8,10 @@ const img = new Image()
 
 img.src = yby
 
+module.hot.accept('./images/yby.jpg', () => {
+    img.src = yby
+})
+
 module.hot.accept('./render.js', () => {
     console.log('render.js 内容变更了')
 })

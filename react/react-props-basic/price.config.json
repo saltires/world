@@ -1,0 +1,132 @@
+{
+    "check": {
+        "font": {
+            "pay_list": [
+                {
+                    "name": "单次", 
+                    "money": "1", 
+                    "original_price": null, 
+                    "text": "原创万岁", 
+                    "show_text_ac": true, 
+                    "day_price": "字体检测快速体验", 
+                    "type": 9, 
+                    "id": 1
+                }, 
+                {
+                    "name": "一个月", 
+                    "money": "9", 
+                    "original_price": "15", 
+                    "text": "原创万岁", 
+                    "show_text_ac": true, 
+                    "day_price": "30天无上限检测套餐", 
+                    "type": 14, 
+                    "id": 2
+                }
+            ]
+        }, 
+        "content": {
+            "pay_list": [
+                {
+                    "name": "12个月", 
+                    "money": "106", 
+                    "original_price": "348", 
+                    "day_price": "每日仅需0.29元", 
+                    "month": false, 
+                    "type": 5, 
+                    "id": 1, 
+                    "text": "原创万岁", 
+                    "member": true
+                }, 
+                {
+                    "name": "3个月", 
+                    "money": "34", 
+                    "original_price": "87", 
+                    "day_price": "每月仅需11.33元", 
+                    "month": false, 
+                    "type": 4, 
+                    "text": "原创万岁", 
+                    "id": 2, 
+                    "member": true
+                }, 
+                {
+                    "name": "1个月", 
+                    "money": "13", 
+                    "original_price": "29", 
+                    "day_price": "初次体验就选它", 
+                    "month": true, 
+                    "type": 2, 
+                    "text": "原创万岁", 
+                    "id": 3, 
+                    "member": true
+                }
+            ]
+        }
+    }, 
+    "space": {
+        "vip": {
+            "pay_list": [
+                {
+                    "name": "年度大会员", 
+                    "money": "219", 
+                    "original_price": "399", 
+                    "text": "原创万岁", 
+                    "day_price": "每日仅需0.60", 
+                    "day_price_number": "0.60", 
+                    "month": false, 
+                    "type": 20, 
+                    "id": 1
+                }, 
+                {
+                    "name": "季度大会员", 
+                    "money": "61", 
+                    "original_price": "109", 
+                    "text": "原创万岁", 
+                    "day_price": "每月仅需20.3", 
+                    "day_price_number": "20.3", 
+                    "month": false, 
+                    "type": 19, 
+                    "id": 2
+                }, 
+                {
+                    "name": "包月", 
+                    "money": "26", 
+                    "original_price": "(¥59/月)", 
+                    "text": "原创万岁", 
+                    "day_price": "初次体验就选它", 
+                    "month": true, 
+                    "type": 18, 
+                    "id": 3
+                }
+            ]
+        }
+    }, 
+    "mobile": { }, 
+    "copy": { }, 
+    "edu": { },
+    "pay": { 
+        "copy_rights":{
+            "activity" : "439",
+            "normal" : "499"
+        },
+        "rights":{
+            "id_15":{
+                "total":"19",
+                "prices":"19元/月",
+                "activity_total":"17.00",
+                "activity_prices":"17元/月"
+            },
+            "id_16":{
+                "total":"45",
+                "prices":"45元/3月",
+                "activity_total":"40.00",
+                "activity_prices":"40元/3月"
+            },
+            "id_17":{
+                "total":"180",
+                "prices":"180元/年",
+                "activity_total":"158.00",
+                "activity_prices":"158元/年"
+            }
+        }
+    }
+}
