@@ -1,25 +1,50 @@
+// import React, { Component } from 'react'
+// import Header from './Header'
+// import Content from './Content'
+
+// export default class App extends Component {
+//   state = {
+//     header_name: 'saltrie_header'
+//   }
+
+//   changeHeaderName = (value) => {
+//     this.setState({
+//       header_name: value
+//     })
+//   }
+
+//   render() {
+//     const { header_name } = this.state
+//     return (
+//       <div>
+//         <Header header_name={header_name}  changeHeaderName={this.changeHeaderName}></Header>
+//         <Content></Content>
+//       </div>
+//     )
+//   }
+// }
+
+// 父子组件通讯 - 涉及三个级别的数据传输
 import React, { Component } from 'react'
-import Header from './Header'
-import Content from './Content'
+import One from './One'
 
 export default class App extends Component {
   state = {
-    header_name: 'saltrie_header'
+    list: ['hello', 'baby']
   }
-
-  changeHeaderName = (value) => {
+  changeList = () => {
+    const {list} = this.state
     this.setState({
-      header_name: value
+      list: list.reverse()
     })
   }
-  
   render() {
-    const { header_name } = this.state
+    const { list } = this.state
     return (
       <div>
-        <Header header_name={header_name}  changeHeaderName={this.changeHeaderName}></Header>
-        <Content></Content>
+        <One list={list} changeList={this.changeList}></One>
       </div>
     )
   }
 }
+
