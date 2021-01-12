@@ -43,6 +43,7 @@ export default class App extends Component {
     return (
       <div>
         <One list={list} changeList={this.changeList}></One>
+        {/* <One list={1} changeList={this.changeList}></One> */}
       </div>
     )
   }
