@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "html-react-parser": "^1.1.2"
+  }
+}
