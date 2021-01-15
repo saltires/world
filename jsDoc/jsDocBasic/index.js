@@ -87,6 +87,7 @@ var hh = 1;
 /** @type {(string|Array.<string>)} */
 var qishi;
 
+
 /**
  * Solves equations of the form a * x = b
  * @example
@@ -100,6 +101,8 @@ var qishi;
 globalNS.method1 = function (a, b) {
     return b / a;
 };
+
+globalNS.
 
 
 

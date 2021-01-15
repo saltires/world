@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://github.com" onclick="return push('test1')">hihi</a>
+    <button class="push2" onclick="push('test2')">push test2</button>
+    <button class="push3" onclick="replace('test3')">replace test3</button>
+    <button class="forward" onclick="forward()">前进</button>
+    <button class="back" onclick="back()">后退</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/history/4.10.1/history.js"
+        integrity="sha512-5O/DkGvq246hIQG0fkorgncsof3DPLZshzoryW9iSLt1JpP8znFUSXXu9WuvYhx35MC9IdcR6XTDS28b0W+ubw=="
+        crossorigin="anonymous"></script>
+    <script>
+        const history = History.createBrowserHistory();
+
+        function push(path) {
+            history.push(path);
+            return false
+        }
+
+        function replace(path) {
+            history.replace(path)
+        }
+
+        function back() {
+            history.goBack()
+        }
+
+        function forward() {
+            history.goForward()
+        }
+
+        history.listen((location, action) => {
+            console.log(
+                `The current URL is ${location.pathname}${location.search}${location.hash}`
+            );
+            console.log(`The last navigation action was ${action}`);
+        });
+
+        /* 这里使用 react-router 底层使用的 history 库模拟了前端路由的实现 */
+        /* history 库地址：https://www.npmjs.com/package/history */
+    </script>
+</body>
+
+</html>
