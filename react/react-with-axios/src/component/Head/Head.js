@@ -4,9 +4,19 @@ import './Head.scss'
 
 export default class Head extends Component {
 
-    state = {
+    /* state = {
         inputValue: ''
-    }
+    } */
+
+   /**
+    * 
+    * @param {*} inputValue 
+    */
+
+    /**
+     * 
+     * @param {*} inputValue 
+     */
 
     getUser = (inputValue) => {
         const url = `/api/search/count?q=${inputValue}&type=Users`
