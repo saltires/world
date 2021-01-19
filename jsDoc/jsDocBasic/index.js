@@ -102,7 +102,6 @@ globalNS.method1 = function (a, b) {
     return b / a;
 };
 
-globalNS.
 
 
 

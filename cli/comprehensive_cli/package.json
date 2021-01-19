@@ -1,0 +1,13 @@
+{
+  "name": "comprehensive_cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "env-paths": "^2.2.0",
+    "extract-zip": "^2.0.1",
+    "node-fetch": "^2.6.1",
+    "ora": "^5.2.0"
+  }
+}
