@@ -1,3 +1,4 @@
+// @ts-check
 import { Book, hi } from './Book.js'
 
 /**
@@ -78,7 +79,7 @@ var triState = {
     FALSE: -1,
     /** @type {boolean} */
     /** 枚举 - 确权状态 - 确权中 */
-    MAYBE: true
+    MAYBE: 3
 };
 
 /** @type {number} */
@@ -101,6 +102,18 @@ var qishi;
 globalNS.method1 = function (a, b) {
     return b / a;
 };
+
+/**
+ * A number, or a string containing a number.
+ * @typedef {(number|string)} NumberLike
+ */
+/**
+ * Set the magic number.
+ * @param {NumberLike} x - The magic number.
+ */
+function setMagicNumber(x) {
+    // x = true
+} 
 
 
 
