@@ -41,16 +41,25 @@ module.exports = {
     // 
     ecmaVersion: 12,
     // sourceType 控制我们的代码是否启用 ES module，默认是不启用，但是如果你用的standard共享配置，它设置的是 true，如果你不想启用 ES module，请在这里覆盖掉它
-    sourceType: false
+    // sourceType: "script"
   },
   /**
    * ① rules 控制 eslint 每一条校验规则的开启和关闭
-   * ② rules 中的每一条规则，都可以针对性的设置是否开启和关闭、以及开启时在检测结果中，这类规则是警告还是错误消息
+   * ② rules 中的每一条规则，都可以针对性的设置是否开启和关闭(off)、以及开启时在检测结果中，这类规则是警告(warn)还是错误消息(error)
+   * ③ standard 风格已经帮我们开启很多 rules 规则，基本上可以满足绝大多数开发者的需求
    */
   rules: {
     // 设置为 error 后，检测结果中关乎这条规则的问题都会报错
     // "no-alert": "error"
-    "no-alert": "error"
+    "no-alert": "off"
+  },
+  /**
+   * 1、globals 就是帮助我们在代码中额外声明可用的全局变量
+   * 2、例如当项目中有使用 saltire_util 这个全局变量时，如果不作声明，eslint 会爆出saltire_util未定义的错误
+   * 3、解决方法就是在 globals 对象下声明 saltire_util
+   */
+  globals: {
+    "saltire_util": "readonly"
   }
 }
 
@@ -62,17 +71,18 @@ module.exports = {
  * 反之，parserOptions的ecmaVersion只做语法检查，全局变量是否可用的问题不归它管
  */
 
-module.exports = {
-  env: {
-    browser: true,
-    es6: false
-  },
-  extends: [
-    'standard'
-  ],
-  parserOptions: {
-    ecmaVersion: 2015,
-  },
-  rules: {
-  }
-}
+// module.exports = {
+//   env: {
+//     browser: true,
+//     es6: false
+//   },
+//   extends: [
+//     'standard'
+//   ],
+//   parserOptions: {
+//     ecmaVersion: 2015,
+//   },
+//   rules: {
+    
+//   }
+// }

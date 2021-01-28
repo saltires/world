@@ -5,3 +5,5 @@ const bar = () => {
 bar()
 
 alert('hihi')
+
+saltire_util('hohi')
