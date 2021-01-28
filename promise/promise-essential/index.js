@@ -122,6 +122,80 @@ class SaltirePromise {
 
         return chainPronise
     }
+
+    /**
+     * Promise 的  finally 方法，无论状态变为 fulfilled 还是 rejected 都会执行
+     */
+    finally(callback) {
+        /** finally 方法提供的回调总是会在状态发生变化后被执行 */
+        return this.then(value => {
+            return SaltirePromise.resolve(callback()).then(() => value)
+        }, error => {
+            return SaltirePromise.resolve(callback()).then(() => { throw error })
+        })
+    }
+
+    /**
+     * Promise 的 catch 方法，捕获错误
+     * @param {function} fallCallback 
+     */
+    catch(fallCallback) {
+        return this.then(undefined, fallCallback)
+    }
+
+    /**
+     *  promise 的 all 方法，无论是否存在异步代码，按顺序返回结果
+     * @param {Array<Promise|any>} array 传入 all 方法的数组，里面可以存放 promise 或普通值
+     */
+    static all(array) {
+        let result = [], register = 0
+
+        return new SaltirePromise((resolve, reject) => {
+            /**
+             * 将数据添加到 all 方法的返回结果数组中
+             * @param {number} index 
+             * @param {any} value 
+             */
+            function addData(index, value) {
+                register++
+                result[index] = value
+
+                if (register === array.length) {
+                    resolve(result)
+                }
+            }
+
+            for (let i = 0; i < array.length; i++) {
+                let temp = array[i]
+                if (temp instanceof SaltirePromise) {
+                    /** SaltirePromise 对象 */
+                    temp.then(value => addData(i, value), error => reject(error))
+                } else {
+                    /** 普通值 */
+                    addData(i, temp)
+                }
+            }
+        })
+    }
+
+    /**
+     * Promise 的 resolve 方法，如果传入的值是 promise，原封不动返回
+     * 如果是普通值，返回一个全新的 promise，并将该值作为 resolve 的结果
+     * @param {any} value 
+     */
+    static resolve(value) {
+        if (value instanceof SaltirePromise) return value
+        return new SaltirePromise(resolve => resolve(value))
+    }
+
+    /**
+     * Promise 的 reject 方法，总是返回一个 rejected 的 promise
+     * @param {any} error 
+     */
+    static reject(error) {
+        if (error instanceof SaltirePromise) return error
+        return new SaltirePromise(undefined, reject => reject(error))
+    }
 }
 
 /**
