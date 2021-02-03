@@ -1,7 +1,7 @@
-import { createStore, combineReducers, applyMiddleware } from '../../../react-react-redux-basic/src/redux/node_modules/redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import * as reducers from './reducers'
 import * as actions from './actions'
-import thunk from '../../../react-react-redux-basic/src/redux/node_modules/redux-thunk'
+import thunk from 'redux-thunk'
 
 const reducer = combineReducers(reducers)
 

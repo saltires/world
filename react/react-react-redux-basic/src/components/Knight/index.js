@@ -14,14 +14,15 @@ export default class Knight extends Component {
     }
 
     dispatch = () => {
-        // store.dispatch(actions.createAddAction(1))
+        this.props.dispatchCount(2)
     }
 
     render() {
+        const { state } = this.props
         return (
             <div>
                 <p>这是 Knight 组件</p>
-                <p>这是从 APP 组件获取的数据：???</p>
+                <p>这是从 APP 组件获取的数据：{state.counter}</p>
 
                 <button onClick={this.asyncDispatch}>异步增加 2</button>
                 <button onClick={this.dispatch}>增加 1</button>
