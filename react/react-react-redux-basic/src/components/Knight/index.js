@@ -7,14 +7,14 @@ export default class Knight extends Component {
     }
 
     /**
-     * 通过 store 修改值
+     * UI 组件通过容器组件传递过来的 props 和 redux 沟通
      */
     asyncDispatch = () => {
-        // store.dispatch(actions.createAsyncAction(2, 2000))
+        this.props.asyncDispatch(2, 500)
     }
 
     dispatch = () => {
-        this.props.dispatchCount(2)
+        this.props.dispatchCount(1)
     }
 
     render() {
