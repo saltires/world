@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 const AppContext = React.createContext()
-const { Provider, Consumer } = AppContext
+const { Provider } = AppContext
 
 export default class App extends Component {
   state = {
@@ -59,9 +59,12 @@ export class Two extends Component {
  * 如果想要在函数式组件中使用 context，那么必须使用 Consumer 
  */
 function Three() {
+  // Hooks 提供了 useContext,不但解决了 Consumer 难用的问题同时也解决了　contextType 只能使用一个 context 的问题。
+  const x = React.useContext(AppContext)
+  console.log(x)
   return (
     <div>
-      <p><Consumer>{value => `Three，${value.name}, ${value.age}`}</Consumer></p>
+      {/* <p><Consumer>{value => `Three，${value.name}, ${value.age}`}</Consumer></p> */}
     </div>
   )
 }

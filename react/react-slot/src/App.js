@@ -6,7 +6,7 @@ export default class App extends Component {
       <div>
         这是 APP 组件
         {/* <A slot={name => <div>{name}</div>}></A> */}
-        <A slot={name => <C name={name}></C>} knight={name => <div>{name}</div>}></A>
+        {/* <A slot={name => <C name={name}></C>} knight={name => <div>{name}</div>}></A> */}
         {/* <A></A> */}
       </div>
     )
